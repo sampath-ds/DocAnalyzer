@@ -1,0 +1,38 @@
+research_task:
+  description: >
+    Analyze the provided PDF document and extract information relevant to the following query:
+    {user_prompt}
+    Focus only on the content explicitly present in the PDF.
+  detailed_instructions: >
+    1. Load and preprocess the PDF document using the provided content.
+    2. Use the PDF search tool to identify sections or passages that explicitly mention information related to the query.
+    3. Do not include any generic or background information not present in the document.
+    4. If no content in the document directly addresses the query, return: "No relevant information found in the document."
+    5. Package the extracted information, including page numbers or section references, in a structured format.
+  expected_output: >
+    A detailed list of relevant information extracted from the document that addresses the user's query,
+    including contextual references (e.g., page numbers or sections), or a clear message stating "No relevant information found in the document."
+  agent: researcher
+  priority: high
+  error_handling: >
+    If the document cannot be processed or the extraction yields ambiguous results, return a clear error message.
+
+reporting_task:
+  description: >
+    Based on the extracted information, formulate a clear and concise response to the user's query:
+    {user_prompt}
+    Use only the evidence provided in the PDF.
+  detailed_instructions: >
+    1. Receive the structured data output from the research task.
+    2. Interpret the user query strictly in the context of the extracted document information.
+    3. Synthesize a concise answer using only the content present in the PDF.
+    4. Do not add any generic details or external knowledge.
+    5. If the research task indicates that no relevant content is found, output: "No relevant information found in the document."
+    6. Format the final answer in markdown.
+  expected_output: >
+    A clear, concise markdown response that directly answers the user's query based solely on the provided PDF content,
+    or a clear message stating "No relevant information found in the document" if applicable.
+  agent: reporting_analyst
+  priority: high
+  error_handling: >
+    If the synthesized response is incomplete or the available data is insufficient, clearly state that the document does not provide the required information.

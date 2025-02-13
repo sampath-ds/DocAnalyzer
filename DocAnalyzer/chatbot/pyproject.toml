@@ -1,0 +1,28 @@
+[project]
+name = "fleetenablechatbot"
+version = "0.1.0"
+description = "fleetenablechatbot using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.100.1,<1.0.0",
+    "langchain-groq",
+    "langchain_huggingface",
+    "crew",
+    "langchain-huggingface"
+]
+
+
+[project.scripts]
+fleetenablechatbot = "fleetenablechatbot.main:run"
+run_crew = "fleetenablechatbot.main:run"
+train = "fleetenablechatbot.main:train"
+replay = "fleetenablechatbot.main:replay"
+test = "fleetenablechatbot.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
