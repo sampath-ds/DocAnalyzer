@@ -1,6 +1,6 @@
-# Fleetenablechatbot Crew
+# DocAnalyzer Crew
 
-Welcome to the Fleetenablechatbot Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+Welcome to the DocAnalyzer Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
 ## Installation
 
@@ -22,10 +22,10 @@ crewai install
 
 **Add your `OPENAI_API_KEY` into the `.env` file**
 
-- Modify `src/fleetenablechatbot/config/agents.yaml` to define your agents
-- Modify `src/fleetenablechatbot/config/tasks.yaml` to define your tasks
-- Modify `src/fleetenablechatbot/crew.py` to add your own logic, tools and specific args
-- Modify `src/fleetenablechatbot/main.py` to add custom inputs for your agents and tasks
+- Modify `src/docanalyzer/config/agents.yaml` to define your agents
+- Modify `src/docanalyzer/config/tasks.yaml` to define your tasks
+- Modify `src/docanalyzer/crew.py` to add your own logic, tools and specific args
+- Modify `src/docanalyzer/main.py` to add custom inputs for your agents and tasks
 
 ## Running the Project
 
@@ -35,7 +35,7 @@ To kickstart your crew of AI agents and begin task execution, run this from the 
 $ crewai run
 ```
 
-This command initializes the fleetenablechatbot Crew, assembling the agents and assigning them tasks as defined in your configuration.
+This command initializes the  DocAnalyzer Crew, assembling the agents and assigning them tasks as defined in your configuration.
 
 This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
 
@@ -45,7 +45,7 @@ The fleetenablechatbot Crew is composed of multiple AI agents, each with unique 
 
 ## Support
 
-For support, questions, or feedback regarding the Fleetenablechatbot Crew or crewAI.
+For support, questions, or feedback regarding the  DocAnalyzer Crew or crewAI.
 - Visit our [documentation](https://docs.crewai.com)
 - Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
 - [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
